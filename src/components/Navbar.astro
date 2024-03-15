@@ -1,0 +1,52 @@
+---
+import { social, info } from "../assets/data";
+const { pathname } = Astro.url;
+---
+
+<nav
+  class="w-full bg-black text-white flex items-center px-4 py-3 top-0 z-50 justify-between md:justify-between xs:justify-center "
+>
+  <ul
+    class="grid justify-center xl:basis-[20%] md:basis-[28%] md:grid xs:hidden"
+    style={{ gridTemplateColumns: `repeat(${social.length},minmax(0,1fr))` }}
+  >
+    {
+      social.map((social) => (
+        <li>
+          <a
+            href="#"
+            class="text-2xl opacity-50  hover:opacity-100 duration-300 ease-in cursor-pointer"
+          >
+            <i class={social.logo} />
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <ul
+    class="grid justify-items-center gap-x-3 xl:basis-[20%] md:basis-[28%] sm:basis-[40%] xs:basis-[75%]"
+    style={{ gridTemplateColumns: `repeat(${info.length + 1}, minmax(0,1fr))` }}
+  >
+    <li>
+      <a
+        href="#home"
+        class="opacity-70 hover:opacity-100 duration-300 tex-[17px] font-semibold"
+      >
+        Home
+      </a>
+    </li>
+    {
+      pathname === "/" &&
+        info.map((personal) => (
+          <li>
+            <a
+              href={`#${personal.text.toLowerCase()}`}
+              class="opacity-70 hover:opacity-100 duration-300 tex-[17px] font-semibold"
+            >
+              {personal.text}
+            </a>
+          </li>
+        ))
+    }
+  </ul>
+</nav>
