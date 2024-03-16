@@ -1,3 +1,3 @@
-export { ProfilePicture } from "./ProfilePicture";
+export * from "./ProfilePicture.astro";
 export  * from "./Navbar.astro";
 
