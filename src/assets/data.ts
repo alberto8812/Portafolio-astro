@@ -13,6 +13,6 @@ export const social: SocialInterface[] = [
 export const info:PageInterface[] =[
   
     {text:'About'},
-    {text:'Proyects',}
+    {text:'Projects',}
   
 ]
