@@ -9,3 +9,9 @@ export  interface Technologies{
     text:string;
     logo:string;
 }
+export  interface Proyects{
+    title:string,
+    description:string,
+    image:string,
+    color:string,
+}

@@ -1,0 +1,28 @@
+---
+interface Props{
+    title:string,
+    description:string,
+    image:string,
+    color:string,
+}
+const {
+    title,
+    description,
+    image,
+    color,
+}=Astro.props
+---
+
+<a 
+href="#" 
+class="parent-container hover:scale-[105%] transition-all duration-300 ease-in relative border border-gray-400/80 bg-center h-[300px] cursor-pointer rounded-lg mt-4"
+style={{backgroundImage:`linear-gradient(to bottom,hsla(0,0%,100%,0.05),hsla(0,0%,50%)),url(/img/${image}.png)`,backgroundSize:'cover',backgroundRepeat: 'no-repeat'}}
+>
+<div class="contianer absolute bottom-0 px-5 my-6">
+    <h3 class="text-3xl text-gray-300 font-bold">{title}</h3>
+    <p class="paragraph text-1xl row-span-1 text-gray-300 opacity-0 md:text-base xxs:text-[20px] xs:text-[15px]">{description.slice(0,60)} ...</p>
+
+</div>
+
+</a>
+
