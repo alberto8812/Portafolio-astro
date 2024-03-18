@@ -30,7 +30,7 @@ export const technologies:Technologies[]=[
 
   },
   {
-    text:'Jeact',
+    text:'Javascript',
     logo:'bx bxl-javascript',
 
   },
