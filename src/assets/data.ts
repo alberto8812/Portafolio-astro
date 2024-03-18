@@ -40,7 +40,7 @@ export const technologies:Technologies[]=[
 
   },
   {
-    text:'postgresql',
+    text:'Postgresql',
     logo:'bx bxl-postgresql',
 
   },
@@ -56,12 +56,12 @@ export const technologies:Technologies[]=[
 
   },
   {
-    text:'nodejs',
+    text:'Nodejs',
     logo:'bx bxl-nodejs',
     
   },
   {
-    text:'html5',
+    text:'Html5',
     logo:'bx bxl-html5',
 
   },
@@ -71,7 +71,7 @@ export const technologies:Technologies[]=[
     
   },
   {
-    text:'tailwind',
+    text:'Tailwind',
     logo:'bx bxl-tailwind-css',
     
   }
