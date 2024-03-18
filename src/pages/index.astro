@@ -1,8 +1,11 @@
 ---
 
 
+import About from '../components/About.astro'
 import Navbar from '../components/Navbar.astro'
 import ProfilePicture from '../components/ProfilePicture.astro'
+import Separator from '../components/Separator.astro'
+import Tecnologies from '../components/Tecnologies.astro'
 
 import Layout from '../layouts/Layout.astro'
 ---
@@ -10,7 +13,15 @@ import Layout from '../layouts/Layout.astro'
 
 <Layout title='Carlos velasco | portafolio'>
     <Navbar/>
-    <ProfilePicture/>
+    <main class="mt-16 scroll-mt-32 lg:mt-10 xxs:mt-4">
+        <ProfilePicture/>
+        <Separator/>
+        <div class="w-full flex justify-center">
+
+            <About/>
+        </div>
+        <Tecnologies/>
+    </main>
 
 
 </Layout>
