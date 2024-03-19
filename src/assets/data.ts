@@ -83,7 +83,9 @@ export const proyects:Proyects[]=[
     title:'market-place',
     description:' At Online Store, you will find a wide selection of products for the whole family. From the latest fashion trends to the hottest electronic devices, and the most fun toys for the little ones, we have it all',
     image:'Marketplace',
-    color:'#121234',
+    color:'#555588',
+    git:'https://github.com/alberto8812/market-place.git',
+    live:'https://market-place-bi.vercel.app',
 
   },
   {
@@ -91,8 +93,29 @@ export const proyects:Proyects[]=[
     description:
     'The PI is themed around video games, where the user can  Sort video games alphabetically,Sort them by genre,Sort them by platform,Filter them by source type and rating,Search for a video game by entering its name in a search bar,Click on the cards to see their details and image',
     image:'game',
-    color:'#121234',
+    color:'#555588',
+    git:'https://github.com/alberto8812/movie-.git',
+    live:'https://videogame-eight.vercel.app/',
 
-  }
+  },
+  {
+    title:'Calculator',
+    description:
+    'A calculator built with React Native is a mobile application that allows you to perform mathematical operations using the React and React Native frameworks',
+    image:'calculadora-ios',
+    color:'#555588',
+    git:'https://github.com/alberto8812/Calculator-React-Native.git',
+    live:'https://github.com/alberto8812/Calculator-React-Native.git',
+
+  },
+]
+
+export const buttons=[
+  {
+    github:'bx bxl-github',
+    demo:'bx bx-desktop',
+    back:'bx bxs-left-arrow-circle',
+
+  },
 ]
 

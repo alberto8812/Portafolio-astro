@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { proyects, buttons } from "../assets/data";
+const { id } = Astro.params;
+
+export const getStaticPaths = () => {
+  return [{ params: { id: "Market-place" } }, 
+  { params: { id: "Game page" } },
+  { params: { id: "Calculator" } },
+];
+};
+
+const card = proyects.find((card) => card.title === id);
+---
+
+<!-- back ground  -->
+<Layout title={`Proyecject | ${id}`}>
+  <div class="relative flex items-center lg:h-screen xs:h-screen">
+    <div
+      class="absolute min-h-screen inset-0 z-[-1] bg-gradient-to-b from-context"
+      style=`--comtext-color:${card?.color}`
+    >
+      <img
+        src={`/img/${card?.image}.png`}
+        class="transition-all duration-500 absolute z-[-1] inset-0 mix-blend-overlay opacity-20 scale-90 w-full object-cover blur-md"
+      />
+    </div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t via-transparent from-zinc-900"
+    >
+    </div>
+    <!-- Main section -->
+    <div class="flex justify-center items-center w-full h-[80%] xs:h-fit">
+      <div
+        class="flex gap-x-10 2xl:mt-2 2xl:w-3/5 2xl:h-fit xl:w-4/5 lg:mt-0 lg:flex-row lg:h-[90%] xs:w-4/5 xs:flex-col-reverse"
+      >
+        <img
+          src={`/img/${card?.image}.png`}
+          alt={card?.title}
+          class="aspect-square rounded-t-md object-cover object-top mx-auto lg:mb-0 lg:mt-0 sm:w-[450px] xxs:mt-10 xs:w-[80%] xs:mb-5 xs:mt-20"
+        />
+        <div class="flex flex-col gap-y-3 relative lg:py-0 xs:py-7">
+          <h1 class="text-[40px] leading-[70px] font-black text-white">
+            {card?.title}
+          </h1>
+          <p class="text-white/95 sm:text-[14px] xs:text-[12px]">
+            {card?.description}
+          </p>
+
+          <div
+            class="absolute flex gap-x-5 lg:bottom-4 xxs:right-16 xxs:flex-row xxs:-bottom-4 xs:flex-col  xs:-bottom-16 xs:right-[calc(100vw-90%)]"
+          >
+            <a
+              href={`/#${id}`}
+              class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in text-center text-white"
+            >
+              <i class={`${buttons[0].back} lg:text-[17px] xs:text-[14px] text-center`}>
+                Back
+              </i>
+            </a>
+            <a
+              href={`${card?.git}`}
+              class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in text-center text-white"
+            >
+              <i class={`${buttons[0].github} lg:text-[17px] xs:text-[14px] text-center`}>
+                Repository
+              </i>
+            </a>
+            <a
+              href={`${card?.live}`}
+              class="text-2xl opacity-60 hover:opacity-100 duration-300 ease-in text-center text-white"
+            >
+              <i class={`${buttons[0].demo} lg:text-[17px] xs:text-[14px] text-center`}>
+                Live demo
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

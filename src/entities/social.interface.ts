@@ -14,4 +14,6 @@ export  interface Proyects{
     description:string,
     image:string,
     color:string,
+    git:string,
+    live:string,
 }
