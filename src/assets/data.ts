@@ -99,13 +99,23 @@ export const proyects:Proyects[]=[
 
   },
   {
-    title:'Calculator',
+    title:'Calculator-React_Native',
     description:
     'A calculator built with React Native is a mobile application that allows you to perform mathematical operations using the React and React Native frameworks',
     image:'calculadora-ios',
     color:'#555588',
     git:'https://github.com/alberto8812/Calculator-React-Native.git',
     live:'https://github.com/alberto8812/Calculator-React-Native.git',
+
+  },
+  {
+    title:'Movie-React_Native',
+    description:
+    'Movies App is a mobile application built with React Native that allows users to explore and discover information about movies. It utilizes the TMDB API to fetch movie data and provides various features like searching for movies, viewing movie details, trending movies, upcoming releases, top-rated movies, and cast details.',
+    image:'MovieDB',
+    color:'#555588',
+    git:'https://github.com/alberto8812/movieDB-React_Native.git',
+    live:'https://github.com/alberto8812/movieDB-React_Native.git',
 
   },
 ]
